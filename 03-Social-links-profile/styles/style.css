@@ -1,0 +1,114 @@
+/*------------------------------------*\
+   $FONT-FACE & ROOT
+\*------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --font-family-inter: "Inter", sans-serif;
+    --color-white: hsl(0, 0%, 100%);
+    --color-green: hsl(75, 94%, 57%);
+    --color-grey-700: hsl(0, 0%, 20%);
+    --color-grey-800: hsl(0, 0%, 12%);
+    --color-grey-900: hsl(0, 0%, 8%);
+}
+
+/*------------------------------------*\
+   $ELEMENTS
+\*------------------------------------*/
+
+body {
+
+    display: grid;
+    place-items: center;
+    height: 100vh;
+
+    background-color: var(--color-grey-900);
+    color: var(--color-white);
+
+    font-family: var(--font-family-inter);
+    font-size: 0.875rem;
+    line-height: 1.5em;
+    letter-spacing: 0px;
+}
+
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a,
+a:link,
+a:hover,
+a:visited,
+a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*------------------------------------*\
+   $Typography
+\*------------------------------------*/
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/*------------------------------------*\
+   $Style Trumps
+\*------------------------------------*/
+
+.d-flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/*------------------------------------*\
+   $Components
+\*------------------------------------*/
+
+.profile {
+    gap: 24px;
+
+    padding: 40px;
+    border-radius: 12px;
+    background-color: var(--color-grey-800);
+
+    text-align: center;
+}
+
+.profile__pic {
+    width: 88px;
+    margin: 0 auto;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.profile__description {
+    gap: 4px;
+}
+
+.profile__description span {
+    font-weight: 700;
+    color: var(--color-green);
+}
+
+.profile__links {
+    gap: 16px;
+}
+
+.profile__links li {
+    padding-block: 12px;
+    border-radius: 8px;
+    background-color: var(--color-grey-700);
+}
+
+.profile__links li:hover {
+    background-color: var(--color-green);
+    color: var(--color-grey-700);
+    cursor: pointer;
+}
