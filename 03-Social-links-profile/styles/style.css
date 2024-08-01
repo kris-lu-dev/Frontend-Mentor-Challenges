@@ -105,6 +105,7 @@ h3 {
     padding-block: 12px;
     border-radius: 8px;
     background-color: var(--color-grey-700);
+    font-weight: 700;
 }
 
 .profile__links li:hover {
