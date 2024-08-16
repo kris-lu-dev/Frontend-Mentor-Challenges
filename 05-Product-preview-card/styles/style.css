@@ -1,0 +1,165 @@
+/*------------------------------------*\
+   $FONT-FACE & ROOT
+\*------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@100..900&display=swap');
+
+:root {
+    --color-dark-cyan: hsl(158, 36%, 37%);
+    --color-dark-cyan-hover: #1A4032;
+    --color-cream: hsl(30, 38%, 92%);
+    --color-very-dark-blue: hsl(212, 21%, 14%);
+    --color-dark-grayish-blue: hsl(228, 12%, 48%);
+    --color-white: hsl(0, 0%, 100%);
+
+    --font-family-fraunces: "Fraunces", serif;
+    --font-family-montserrat: "Montserrat", sans-serif;
+}
+
+/*------------------------------------*\
+   $ELEMENTS
+\*------------------------------------*/
+
+body {
+    display: grid;
+    place-items: center;
+    padding: 28px 16px;
+    background-color: var(--color-cream);
+
+    font-family: var(--font-family-montserrat);
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--color-dark-grayish-blue);
+}
+
+button {
+    height: 48px;
+    width: 100%;
+    background-color: var(--color-dark-cyan);
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    color: var(--color-white);
+}
+
+button:hover {
+    background-color: var(--color-dark-cyan-hover);
+    cursor: pointer;
+}
+
+button > img {
+    display: inline-block;
+    margin-right: 12px;
+    vertical-align: middle;
+}
+
+button > span {
+    vertical-align: middle;
+}
+
+/*------------------------------------*\
+   $Typography
+\*------------------------------------*/
+
+h1,
+.text-h1-like {
+    font-family: var(--font-family-fraunces);
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.text-color-very-dark-blue {
+    color: var(--color-very-dark-blue);
+}
+
+.text-color-dark-cyan {
+    color: var(--color-dark-cyan);
+}
+
+
+/*------------------------------------*\
+   $Components
+\*------------------------------------*/
+
+.wrapper {
+    padding: 24px;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    max-width: 343px;
+    background-color: var(--color-white);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.product__category {
+    font-size: 0.86rem;
+    letter-spacing: 5px;
+    line-height: auto;
+    text-transform: uppercase;
+}
+
+.product__title {
+    margin-top: 12px;
+    margin-bottom: 16px;
+}
+
+.product__text {
+    margin-bottom: 24px;
+}
+
+.product__price {
+    margin-bottom: 20px;
+}
+
+.product__price span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.product__price span:first-child {
+    margin-right: 19px;
+}
+
+.product__price__original {
+    font-size: 0.93rem;
+    text-decoration: line-through;
+}
+
+@media (min-width: 768px) {
+
+    .wrapper {
+        padding: 32px;
+    }
+
+    .product {
+        flex-direction: row;
+        max-width: 600px;
+    }
+
+    .product > * {
+        width: 50%;
+    }
+
+    .product__pic .responsive-img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .product__title {
+        margin-top: 20px;
+        margin-bottom: 24px;
+    }
+
+    .product__text {
+        margin-bottom: 29px;
+    }
+
+    .product__price {
+        margin-bottom: 30px;
+    }
+
+}
