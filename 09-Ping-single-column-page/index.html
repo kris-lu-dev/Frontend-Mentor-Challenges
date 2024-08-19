@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles/reset.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  <title>Frontend Mentor | Ping coming soon page</title>
+
+</head>
+
+<body>
+  <main class="main flex-column-container">
+
+    <header class="header">
+      <h1 class="header__title">PING<span class="text-color-primary">.</span></h1>
+      <p class="header__text">
+        <span class="text-color-light">We are launching</span> <span class="text-bold">soon!</span>
+      </p>
+    </header>
+
+    <form class="form" id="form" action="post" novalidate>
+      <fieldset class="flex-column-container">
+        <legend class="form__legend">Subscribe and get notified</legend>
+        <div class="form__body flex-column-container">
+          <div class="form__field">
+            <label for="email" class="form__label visually-hidden">Your email address</label>
+            <input type="email" class="form__input" name="email" id="email" aria-describedby="email__error"
+              placeholder="Your email address" required>
+            <p class="form__error" id="email__error"></p>
+          </div>
+          <button class="form__button" id="form__button">Notify Me</button>
+        </div>
+      </fieldset>
+    </form>
+
+    <img class="image" src="./images/illustration-dashboard.png" alt="" width="1280" height="782">
+
+    <footer class="footer">
+      <ul class="footer__social flex-row-container">
+        <li><a href=""><i class="ri-facebook-fill"></i></a></li>
+        <li><a href=""><i class="ri-twitter-x-line"></i></a></li>
+        <li><a href=""><i class="ri-instagram-line"></i></a></li>
+      </ul>
+      <p>&copy; Copyright Ping. All rights reserved.</p>
+    </footer>
+
+  </main>
+
+</body>
+
+<script src="./scripts/script.js"></script>
+
+</html>
