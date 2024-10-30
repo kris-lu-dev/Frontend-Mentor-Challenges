@@ -54,9 +54,13 @@ ol[class] {
   list-style: none;
 }
 
-/* Remove link default style */
+/* Set link default style
+   1. Use the inherited text color
+   2. Remove underline 
+   3. Show pointer cursor on hover */
 a {
-  all: unset;
+  color: inherit;
+  text-decoration: none;
   cursor: pointer;
 }
 
@@ -88,6 +92,7 @@ button {
   color: inherit;
   cursor: pointer;
 }
+
 
 /* Prevent vertical resizing of `textarea` and make sure it's not tiny */
 textarea {
