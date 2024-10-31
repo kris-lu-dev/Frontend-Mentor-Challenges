@@ -151,7 +151,6 @@ h2 {
 .cards-container {
     --cards-gap: 24px;
 
-
     display: grid;
     place-items: center;
     gap: var(--cards-gap);
@@ -229,16 +228,6 @@ h2 {
 
     body {
         padding-block: 80px;
-    }
-
-    .header {
-        margin-bottom: 64px;
-    }
-
-}
-
-@media (min-width: 1024px) {
-    body {
         padding-inline: clamp(0.5rem, 5vw, 165px);
     }
 
@@ -248,10 +237,21 @@ h2 {
 
     .header {
         width: 540px;
+        margin-bottom: 64px;
     }
 
     .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    .cards-container {
         max-width: calc(var(--card-max-width)*3 + var(--cards-gap)*2);
+
         grid-template-columns: repeat(3, 1fr);
         /* Create 3 rows */
         grid-template-rows: repeat(2, 1fr);
